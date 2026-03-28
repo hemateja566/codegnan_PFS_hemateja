@@ -41,7 +41,7 @@ print(f"after swapping Num={Num} and Num_2={Num_2}")
 #Checking leaf year or not program
 Leap_year=int(input("Enter year:"))
 if (Leap_year % 4==0 and Leap_year%100!=0) or Leaf_year % 400==0:
-    print(f"yes,{Leap_year} is a leap year")
+    print(f"yes,{eap_year} is a leap year")
 else:
     print(f"no,{Leap_year} is not a leap year")
           
