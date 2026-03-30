@@ -43,7 +43,7 @@ profile={"name":"teja",
          "salary":40000,
          "emp_id":"A43G566"}
 pin=int(input("enter the pin:"))
-if pin in profile['pin_no']:
+if pin == profile['pin_no']:
     print(profile)
 else:
     print("enter correct pin")
