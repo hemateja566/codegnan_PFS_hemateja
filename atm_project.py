@@ -1,7 +1,8 @@
 icici_hemateja_ac_details = {"Name":"Kosana Hema Teja Reddy",
                             "date-of-brith" : "10-09-2004",
                             "ATM PIN" : "934728",
-                            "Balance" : 20000}
+                            "Balance" : 20000,
+                            "transaction history":[]}
 print("welcome to the icici bank")
 print("please insert the ATM card")
 icici_user_pin = input("please enter your 6 digits ATM pin : ")
@@ -12,16 +13,21 @@ if len(icici_user_pin) == 6:
             money_w = int(input("enter the money to withdraw : "))
             if money_w <= icici_hemateja_ac_details['Balance']:
                 icici_hemateja_ac_details['Balance'] -= money_w
+                icici_hemateja_ac_details['transaction history'].append(money_w)
                 print(icici_hemateja_ac_details['Balance'])
             else:
                 print("insuff")
-        elif user_choice == 2:
+        elif icici_user_choice == 2:
             deposite_m = int(input("pls enter the money you want to deposite: "))
             if deposite_m % 100 == 0 and deposite_m >= 5000:
                 icici_hemateja_ac_details['Balance'] += deposite_m
+                icici_hemateja_ac_details['transaction history'].append("deposit:",deposite_m)
                 print(f"you have deposite {deposite_m} and total is {icici_hemateja_ac_details['Balance']}")
             else :
                 print(f"{deposite_m} you have entered is change or less than {5000}")
+        elif icici_user_choice == 3:
+            print(f"tansaction history :")
+            print(icici_hemateja_ac_details['transaction history'])
     else:
         print("the pin number is incorrect")
 else:
