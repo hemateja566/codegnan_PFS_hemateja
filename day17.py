@@ -43,11 +43,12 @@ print(math.sqrt(100))
 import random
 num=random.randint(1,100)
 user_num=int(input("enter your desired number:"))
-print(num)
+print("the number is:",num)
 chances=3
 while chances>0:
     if user_num==num:
        print("your guess is correct")
+       chances-=1
     else:
        print("incorrect")
        chances-=1

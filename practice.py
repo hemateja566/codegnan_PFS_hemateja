@@ -83,33 +83,98 @@ print(lst)
 lst = [1, 2, 3]
 new_lst = lst.copy()
 print(new_lst)   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 print(lst)   # [1, 2, 3, 4]
+
+#1.odd or even
+def even_odd(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+print(even_odd(10))
+
+#2.factorial of a number
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
+print(factorial(5))
+
+#3.prime number
+def prime(n):
+    if n <= 1:
+        return "Not Prime"
+    for i in range(2, n):
+        if n % i == 0:
+            return "Not Prime"
+    return "Prime"
+print(prime(7))
+
+#4.reverse of a string
+def reverse_string(s):
+    return s[::-1]
+print(reverse_string("Python"))
+
+#5.addition in list
+def sum_list(lst):
+    total = 0
+    for num in lst:
+        total += num
+    return total
+print(sum_list([1, 2, 3, 4]))
+
+#6.counting vowels
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+print(count_vowels("Python is a programming language"))
+
+#7.palindrome
+def is_palindrome(s):
+    if s == s[::-1]:
+        return "Palindrome"
+    else:
+        return "Not Palindrome"
+print(is_palindrome("madam"))
+
+#8.swap
+def swap(a,b):
+    a,b=b,a
+    return a,b
+print(swap(6,7))    
+
+#9.count words in a string
+def count_words(s):
+    words = s.split()
+    return len(words)
+print(count_words("Python is very easy to learn"))
+
+
+#armstrong
+def armstrong(n):
+    order = len(str(n))
+    total = 0
+    temp = n
+
+    while temp > 0:
+        digit = temp % 10
+        total += digit ** order
+        temp //= 10
+
+    return "Armstrong" if total == n else "Not Armstrong"
+print(armstrong(153))
+
+
+
+
+
+
+
+
+
+
